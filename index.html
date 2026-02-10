@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/navbar_searchbar_categories.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/navbar.css">
+	<link rel="stylesheet" href="./css/sidebar.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/home_profile_settings.css">
+	<link rel="stylesheet" href="./css/navbar_notifications.css">
+	<!-- Page specific css links below -->
+	<link rel="stylesheet" href="./css/homepage_categories.css">
+	<link rel="stylesheet" href="./css/homepage.css">
+	<link rel="stylesheet" href="./css/homepage_product_display.css">
+	<!-- it ends here -->
+	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Welcome to Ecommerce Site</title>
+</head>
+<body>
+	<!-- header component begins here -->
+    <header>
+		<nav>
+			<div class="ham_and_icon">
+				<div class="nav_icon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<a href="index.html" class="logo">
+					<img src="./images/logo.png" loading="lazy" alt="Logo">
+				</a>
+			</div>
+
+			<form action="search.html" class="first_form">
+				<input type="text" placeholder="What are you looking for..." required>
+				<div class="form_options">
+					<i class="fa-solid fa-xmark clear_search"></i>
+					<label for="picture">
+						<i class="fa-solid fa-camera camera_upload"></i>
+					</label>
+					<p class="divider">|</p>
+					<button>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<input id="picture" type="file" accept="image/*" name="">
+				<div class="search_suggestions">
+					<!-- <a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a> -->
+				</div>
+			</form>
+
+			<div class="more_options">
+				<a href="wishlist.html" class="tooltip">
+					<span class="tooltip_text">Wishlist</span>
+					<i class="fa-regular fa-heart"></i>
+				  </a>
+
+				<div class="notifications_button tooltip">
+					<span class="tooltip_text">Notifications</span>
+					<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					<div class="number_of_notifications">2</div>
+					<div class="notifications_container">
+						<div class="notification_header">
+							<h3>Notifications</h3>
+
+							<button class="mark_all_read">Mark all as read</button>
+						</div>
+						<div class="notification_content">
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_success">
+									<i class="fa-solid fa-check"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_success">Your order is ready</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item">
+								<div class="icon text_warning">
+									<i class="fa-solid fa-triangle-exclamation"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_warning">Your order will expire</p>
+									</div>
+									<p class="detail">Complete your purchase soon to secure your items.</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_processing">
+									<i class="fa-solid fa-clock"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_processing">Payment processing</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_error">
+									<i class="fa-solid fa-credit-card"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_error">Payment failed</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="notification_footer">
+							<a href="notifications.html">View all notifications</a>
+						</div>
+					</div>
+				</div>
+
+				<a href="./checkout.html" class="tooltip">
+					<span class="tooltip_text">Cart</span>
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
+
+				<div class="tooltip">
+					<span class="tooltip_text">Log/Sign in</span>
+					<i class="fa-regular fa-circle-user show_more_nav_icon"></i>
+					<div class="profile_settings_container">
+						<!-- <a href="profile.html" class="profile_option">
+							<i class="fa-duotone fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</a> -->
+
+						<a href="orders.html" class="profile_option">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Orders</p>
+						</a>
+
+						<!-- <a href="client_orders.html" class="profile_option">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Client Orders</p>
+						</a>
+
+						<a href="signinnew.html" class="profile_option">
+							<i class="fa-solid fa-user"></i>
+							<p>Sign in</p>
+						</a> -->
+
+						<a href="upload.html" class="profile_option">
+							<i class="fa-solid fa-upload"></i>
+							<p>Upload</p>
+						</a>
+						
+						<!-- <a href="#" class="profile_option">
+							<i class="fa-solid fa-arrow-right-from-bracket"></i>
+							<p>Logout</p>
+						</a>						 -->
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_icon_container">
+	            <div class="show_search_form_button">
+	                <i class="fa-solid fa-magnifying-glass"></i>
+	            </div>
+				<div class="mobile_notification_container">
+					<a href="notifications.html">
+						<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					</a>
+
+					<div class="number_of_notifications">2</div>
+				</div>
+	        </div>
+		</nav>
+		<form action="" class="second_form">
+            <input type="text" placeholder="What are you looking for" required>
+            <div class="form_options">
+				<i class="fa-solid fa-xmark clear_search"></i>
+				<label for="picture">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+				<p class="divider">|</p>
+				<button>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+			<input id="picture" type="file" accept="image/*" name="">
+            <div class="search_suggestions">
+                <!-- <a href="search.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Test2</p>
+                </a>
+                <a href="search.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search2</p>
+                </a>
+                <a href="search.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Test2</p>
+                </a>
+                <a href="search.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search2</p>
+                </a> -->
+            </div>
+			<div class="search_ideas">
+				<h3>Ideas for you</h3>
+
+				<div class="categories_container">
+					
+				</div>
+
+				<h3>Popular on Vince Search</h3>
+
+				<div class="categories_container">
+					
+				</div>
+			</div>
+        </form>
+	</header>
+
+	<div class="mobile_screen_sidebar">
+		<div class="nav_drawer">
+			<div class="drawer_header">
+				<a href="./index.html" class="logo">
+					<img src="./images/logo.png" alt="Logo">
+					<div class="logo_text">
+						<h3>Ecommerce</h3>
+						<p>Welcome Back!</p>
+					</div>
+				</a>
+
+				<i class="close_button fas fa-times"></i>
+			</div>
+		</div>
+
+		<div class="drawer_content">
+			<div class="nav_section">
+				<h3 class="nav_section_title">Quick Actions</h3>
+
+				<div class="nav_section_items">
+					<a href="./checkout.html" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<p>Cart</p>
+						</div>
+
+						<p>20</p>
+					</a>
+
+					<a href="wishlist.html" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-heart"></i>
+							<p>Wishlist</p>
+						</div>
+
+						<p>9</p>
+					</a>
+
+					<a href="orders.html" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Track Orders</p>
+						</div>
+
+						<p>12</p>
+					</a>
+
+					<a href="client_orders.html" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-truck"></i>
+							<p>Track Client Orders</p>
+						</div>
+
+						<p>34</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Categories</h3>
+
+				<div class="nav_section_items">
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/fashion.png" alt="Fashion">
+							<p>Fashion</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Men</a>
+						<a href="">Women</a>
+						<a href="">Children</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/electronics.png" alt="Electronics">
+							<p>Electronics</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Phones</a>
+						<a href="">Laptops</a>
+						<a href="">PCs</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/beauty.png" alt="Beauty">
+							<p>Beauty</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Makeup</a>
+						<a href="">Lipstick</a>
+						<a href="">Lotions</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Browse</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-fire-flame-curved"></i>
+							<p>Trending Now</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-star"></i>
+							<p>New Arrivals</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Account</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-circle-user"></i>
+							<p>My Account</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-location-dot"></i>
+							<p>Saved Addresses</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Support</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-circle-question"></i>
+							<p>Help Center</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="drawer_footer">
+			<a href="#">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span style="margin-left: 5px;">Sign Out</span>
+			</a>
+		</div>
+    </div>
+
+	<div class="drawer_overlay"></div>
+	<!-- header component ends here -->
+
+	<div class="nav_categories_container">
+		<div class="vertical_categories_container">
+			<div class="all_categories_container">
+				<p>All Categories</p>
+				<i class="fa-solid fa-chevron-down"></i>
+			</div>
+
+			<div class="vertical_categories">
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/fashion.png" alt="">
+						Fashion
+					</a>
+					<div class="subcategories_container">
+						<a href="">Men</a>
+						<a href="">Women</a>
+						<a href="">Kids</a>
+					</div>
+				</div>
+
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/electronics.png" alt="">
+						Electronics
+					</a>
+
+					<div class="subcategories_container">
+						<a href="">Phones</a>
+						<a href="">Laptops</a>
+						<a href="">PCs</a>
+					</div>
+				</div>	
+
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/beauty.png" alt="">
+						Beauty
+					</a>
+					<div class="subcategories_container">
+						<a href="">Makeup</a>
+						<a href="">Lipstick</a>
+						<a href="">Lotions</a>
+					</div>
+				</div>
+				
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/groceries.png" alt="">
+						Groceries
+					</a>
+				</div>
+
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/shoes.png" alt="">
+						Shoes
+					</a>
+				</div>
+
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/heels.png" alt="">
+						Heels
+					</a>
+				</div>
+
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/purses.png" alt="">
+						Purses
+					</a>
+				</div>	
+				<div class="category_with_submenu">
+					<a href="categories.html" class="category_plus_icon">
+						<img src="icons/sports.png" alt="">
+						Sports & Outdoors
+					</a>
+				</div>		
+			</div>
+		</div>
+		<div class="horizontal_categories">
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/fashion.png" alt="">
+					Fashion
+				</a>
+				<div class="subcategories_container">
+					<a href="">Men</a>
+					<a href="">Women</a>
+					<a href="">Kids</a>
+				</div>
+			</div>
+
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/electronics.png" alt="">
+					Electronics
+				</a>
+
+				<div class="subcategories_container">
+					<a href="">Phones</a>
+					<a href="">Laptops</a>
+					<a href="">PCs</a>
+				</div>
+			</div>	
+
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/beauty.png" alt="">
+					Beauty
+				</a>
+				<div class="subcategories_container">
+					<a href="">Makeup</a>
+					<a href="">Lipstick</a>
+					<a href="">Lotions</a>
+				</div>
+			</div>
+			
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/groceries.png" alt="">
+					Groceries
+				</a>
+			</div>
+
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/shoes.png" alt="">
+					Shoes
+				</a>
+			</div>
+
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/heels.png" alt="">
+					Heels
+				</a>
+			</div>
+
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/purses.png" alt="">
+					Purses
+				</a>
+			</div>
+			<div class="category_with_submenu">
+				<a href="categories.html" class="category_plus_icon">
+					<img src="icons/sports.png" alt="">
+					Sports & Outdoors
+				</a>
+			</div>		
+		</div>
+	</div>
+
+    <div class="welcome_container">
+		<img src="./images/welcome.jpg" loading="lazy" alt="">
+		  <img src="./images/welcome2.jpg" loading="lazy" alt="">
+		  <div class="overlay">
+			  <div class="welcome_description">
+				  <h1>Discover Your Style</h1> 
+				  <p>Curated collections from world-class brands. Experience shopping reimagined with personalized recommendations and exclusive deals.</p>
+
+				  <div class="btns_container" id="other_btn_cont">
+					<div>
+						<i class="fa-solid fa-bolt"></i>
+						Free Shipping
+					</div>
+
+					<div>
+						<i class="fa-regular fa-star"></i>
+						Premium Quality
+					</div>
+
+					<div>
+						<i class="fa-regular fa-heart" style="color: palevioletred;"></i>
+						24/7 Support
+					</div>
+				  </div>
+
+				  <div class="btns_container">
+					<a href="#">
+						Shop Collection
+						<i class="fa-solid fa-arrow-right"></i>
+					</a>
+
+					<a href="">
+						<i class="fa-solid fa-gift"></i>
+						Gift Cards 
+					</a>
+				  </div>
+			  </div>
+		  </div>
+	</div>
+
+    <main>
+        <div class="heading_category">
+	        <h2>Our Featured Categories</h2>
+
+	        <p>Browse through our various collections</p>
+	    </div>
+
+    	<div class="featured_styles">
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" loading="lazy" alt="Clothing">
+	            <div class="overlay">
+	               <h1>Shirts</h1>
+	            </div>
+	        </a>
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="https://images.pexels.com/photos/8473534/pexels-photo-8473534.jpeg" loading="lazy" alt="">
+	            <div class="overlay">
+	               <h1>Footwear</h1>
+	            </div>
+	        </a>
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="https://images.pexels.com/photos/27165809/pexels-photo-27165809.jpeg" loading="lazy" alt="">
+	            <div class="overlay">
+	               <h1>Watches and Accessories</h1>
+	            </div>
+	        </a>
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="https://images.unsplash.com/photo-1714729382668-7bc3bb261662?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
+	            <div class="overlay">
+	               <h1>Jeans</h1>
+	            </div>
+	        </a>
+    	</div>
+
+		<div class="heading">
+	        <h2>Latest Arrivals</h2>
+
+	        <a href="">View More</a>
+	    </div>
+
+        <div class="featured_products">
+            
+		</div>
+
+		<!-- <div class="heading_category">
+	        <h2>Our Featured Categories</h2>
+
+	        <p>Browse through our various collections</p>
+	    </div>
+
+    	<div class="featured_styles">
+			<a href="search.html" class="featured_style big_feature">
+	            <img src="./images/4.jpg" loading="lazy" alt="Kente Cloth">
+	            <div class="overlay">
+	               <h1>Kente</h1>
+	            </div>
+	        </a>
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="./images/7.jpg" loading="lazy" alt=""Shoe>
+	            <div class="overlay">
+	               <h1>Footwear</h1>
+	            </div>
+	        </a>
+			<a href="search.html" class="featured_style big_feature">
+	            <img src="./images/6.jpg" loading="lazy" alt="Clothing">
+	            <div class="overlay">
+	               <h1>Clothes</h1>
+	            </div>
+	        </a>
+	        <a href="search.html" class="featured_style big_feature">
+	            <img src="./images/2.jpg" loading="lazy" alt=""Jewelry>
+	            <div class="overlay">
+	               <h1>Jewelry</h1>
+	            </div>
+	        </a>
+    	</div> -->
+
+        <!-- <div class="heading">
+	        <h2>Popular Products</h2>
+
+	        <a href="">View More</a>
+	    </div>
+
+        <div class="featured_products">
+            
+		</div> -->
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="company_section">
+                <div class="company_info">
+                    <h3 class="company_title">StyleCraft</h3>
+                    <p class="company_description">
+                        Discover premium fashion and lifestyle products curated for the modern individual. 
+                        Quality craftsmanship meets contemporary design.
+                    </p>
+                </div>
+
+                <div class="contact_info">
+                    <a href="tel:+233548448856" class="contact_item">
+                        <i class="fas fa-phone contact_icon"></i>
+                        <span>1-800-STYLE-01</span>
+                    </a>
+                    <a href="mailto:darkobekoegerald2@gmail.com" class="contact_item">
+                        <i class="fas fa-envelope contact_icon"></i>
+                        <span>hello@stylecraft.com</span>
+                    </a>
+                    <a href="#" class="contact_item">
+                        <i class="fas fa-map-marker-alt contact_icon"></i>
+                        <span>123 Fashion Ave, NY 10001</span>
+                    </a>
+                </div>
+
+                <div class="social_section">
+                    <h4 class="social_title">Follow Us</h4>
+                    <div class="social_links">
+                        <a href="#" class="social_link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social_link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social_link" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social_link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links_section">
+                <div class="link_column">
+                    <h4 class="section-title">Quick Links</h4>
+                    <div class="link-list">
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Press</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Affiliate Program</a>
+                    </div>
+                </div>
+
+                <div class="link_column">
+                    <h4 class="section-title">Customer Service</h4>
+                    <div class="link-list">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">Returns & Exchanges</a>
+                        <a href="#" class="footer-link">Shipping Info</a>
+                        <a href="#" class="footer-link">Size Guide</a>
+                        <a href="#" class="footer-link">Track Your Order</a>
+                        <a href="#" class="footer-link">Customer Reviews</a>
+                    </div>
+                </div>
+
+                <div class="link_column">
+                    <h4 class="section-title">Legal</h4>
+                    <div class="link-list">
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Cookie Policy</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                        <a href="#" class="footer-link">Privacy</a>
+                    </div>
+                </div>
+
+                <div class="trust_section">
+                    <h4 class="section-title">Why Shop With Us</h4>
+
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-shipping-fast trust-icon"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-undo trust-icon"></i>
+                            <span>Easy Returns</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt trust-icon"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-credit-card trust-icon"></i>
+                            <span>Buy Now Pay Later</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ecommerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
+	<script src="./js/sidebarcontroller.js"></script>
+	<script src="./js/primarysearch.js"></script>
+	<script src="./js/nav_icon_click.js"></script>
+	<!-- page specific scripts below -->
+	<script src="./js/homepageproducts.js"></script>
+</body>
+</html>

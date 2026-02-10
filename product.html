@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/navbar_searchbar_categories.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/home_profile_settings.css">
+  <link rel="stylesheet" href="./css/navbar_notifications.css">
+  <!-- Page specific css links below -->
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/product_images_and_description.css">
+  <link rel="stylesheet" href="./css/productpage_product_display.css">
+  <!-- it ends here -->
+  <link rel="shortcut icon" type="image/png" href="./images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Welcome to Ecommerce Site</title>
+</head>
+<body>
+  <header>
+		<nav>
+			<div class="ham_and_icon">
+				<div class="nav_icon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<a href="index.html" class="logo">
+					<img src="./images/logo.png" loading="lazy" alt="Logo">
+				</a>
+			</div>
+
+			<form action="search.html" class="first_form">
+				<input type="text" placeholder="What are you looking for..." required>
+				<div class="form_options">
+					<i class="fa-solid fa-xmark clear_search"></i>
+					<label for="picture">
+						<i class="fa-solid fa-camera camera_upload"></i>
+					</label>
+					<p class="divider">|</p>
+					<button>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<input id="picture" type="file" accept="image/*" name="">
+				<div class="search_suggestions">
+
+				</div>
+			</form>
+
+			<div class="more_options">
+				<a href="#" class="tooltip">
+					<span class="tooltip_text">Favorites</span>
+					<i class="fa-regular fa-heart"></i>
+				  </a>
+
+				<div class="notifications_button tooltip">
+					<span class="tooltip_text">Notifications</span>
+					<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					<div class="number_of_notifications">2</div>
+					<div class="notifications_container">
+						<div class="notification_header">
+							<h3>Notifications</h3>
+
+							<button class="mark_all_read">Mark all as read</button>
+						</div>
+						<div class="notification_content">
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_success">
+									<i class="fa-solid fa-check"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_success">Your order is ready</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item">
+								<div class="icon text_warning">
+									<i class="fa-solid fa-triangle-exclamation"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_warning">Your order will expire</p>
+										<!-- <div class="unread_dot"></div> -->
+									</div>
+									<p class="detail">Complete your purchase soon to secure your items.</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_processing">
+									<i class="fa-solid fa-clock"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_processing">Payment processing</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_error">
+									<i class="fa-solid fa-credit-card"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_error">Payment failed</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
+
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="notification_footer">
+							<a href="notifications.html">View all notifications</a>
+						</div>
+					</div>
+				</div>
+
+				<a href="./checkout.html" class="tooltip">
+					<span class="tooltip_text">Cart</span>
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
+
+				<div class="tooltip">
+					<span class="tooltip_text">Log/Sign in</span>
+					<i class="fa-regular fa-circle-user show_more_nav_icon"></i>
+					<div class="profile_settings_container">
+						<a href="profile.html" class="profile_option">
+							<i class="fa-duotone fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</a>
+
+						<a href="orders.html" class="profile_option">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Orders</p>
+						</a>
+
+						<!-- <a href="client_orders.html" class="profile_option">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Client Orders</p>
+						</a>
+
+						<a href="signinnew.html" class="profile_option">
+							<i class="fa-solid fa-user"></i>
+							<p>Sign in</p>
+						</a> -->
+
+						<a href="upload.html" class="profile_option">
+							<i class="fa-solid fa-upload"></i>
+							<p>Upload</p>
+						</a>
+						
+						<!-- <a href="#" class="profile_option">
+							<i class="fa-solid fa-arrow-right-from-bracket"></i>
+							<p>Logout</p>
+						</a>						 -->
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_icon_container">
+	            <div class="show_search_form_button">
+	                <i class="fa-solid fa-magnifying-glass"></i>
+	            </div>
+				<div class="mobile_notification_container">
+					<a href="notifications.html">
+						<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					</a>
+
+					<div class="number_of_notifications">2</div>
+				</div>
+	        </div>
+		</nav>
+		<form action="" class="second_form">
+            <input type="text" placeholder="What are you looking for" required>
+            <div class="form_options">
+				<i class="fa-solid fa-xmark clear_search"></i>
+				<label for="picture">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+				<p class="divider">|</p>
+				<button>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+			<input id="picture" type="file" accept="image/*" name="">
+            <div class="search_suggestions">
+                
+            </div>
+			<div class="search_ideas">
+				<h3>Ideas for you</h3>
+
+				<div class="categories_container">
+					
+				</div>
+
+				<h3>Popular on Vince Search</h3>
+
+				<div class="categories_container">
+					
+				</div>
+			</div>
+        </form>
+	</header>
+
+	<div class="mobile_screen_sidebar">
+		<div class="nav_drawer">
+			<div class="drawer_header">
+				<div class="logo">
+					<img src="./images/logo.png" alt="Logo">
+					<div class="logo_text">
+						<h3>Ecommerce</h3>
+						<p>Welcome Back!</p>
+					</div>
+				</div>
+
+				<i class="close_button fas fa-times"></i>
+			</div>
+		</div>
+
+		<div class="drawer_content">
+			<div class="nav_section">
+				<h3 class="nav_section_title">Quick Actions</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<p>Cart</p>
+						</div>
+
+						<p>20</p>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-heart"></i>
+							<p>Wishlist</p>
+						</div>
+
+						<p>9</p>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-truck"></i>
+							<p>Track Orders</p>
+						</div>
+
+						<p>34</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Categories</h3>
+
+				<div class="nav_section_items">
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/fashion.png" alt="Fashion">
+							<p>Fashion</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Men</a>
+						<a href="">Women</a>
+						<a href="">Children</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/electronics.png" alt="Electronics">
+							<p>Electronics</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Phones</a>
+						<a href="">Laptops</a>
+						<a href="">PCs</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/beauty.png" alt="Beauty">
+							<p>Beauty</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Makeup</a>
+						<a href="">Lipstick</a>
+						<a href="">Lotions</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Browse</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-fire-flame-curved"></i>
+							<p>Trending Now</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-star"></i>
+							<p>New Arrivals</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Account</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-circle-user"></i>
+							<p>My Account</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-location-dot"></i>
+							<p>Saved Addresses</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Support</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-circle-question"></i>
+							<p>Help Center</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="drawer_footer">
+			<a href="#">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span style="margin-left: 5px;">Sign Out</span>
+			</a>
+		</div>
+  </div>
+
+	<div class="drawer_overlay"></div>
+
+  <main style="border: none;">
+    <div class="product_preview_plus_extra_images">
+      <div class="additional_images">
+        <div class="additional_image active">
+          <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" alt="Image">
+        </div>
+        <div class="additional_image">
+          <img src="https://images.pexels.com/photos/18186106/pexels-photo-18186106.jpeg" alt="Image">
+        </div>
+        <div class="additional_image">
+          <img src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg" alt="Image">
+        </div>
+        <div class="additional_image">
+          <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg" alt="Image">
+        </div>
+      </div>
+      <div class="images_container">
+        <div class="all_images">
+          <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" data-left="" alt="image">
+          <img src="https://images.pexels.com/photos/18186106/pexels-photo-18186106.jpeg" data-left="" alt="image">
+          <img src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg" data-left="" alt="image">
+          <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg" data-left="" alt="image">
+        </div>
+
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="product_description">
+      <h2>Boa Fleece Jacket</h2>
+
+      <p style="color: #666">Jolt/Jackets</p>
+
+      <div class="prices_and_discount">
+        <p class="old_price">£129.00</p>
+        <h2>£122.00</h2>
+        <p class="discount">5% Disc</p>
+      </div>
+      
+      <div class="star_container">
+        <div class="star_reviews">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star" style="color: grey"></i>
+        </div>
+        <p>(4.6) | 200 ratings</p>
+      </div>
+
+      <p style="font-weight: bold;">Descriptions</p>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Non, soluta voluptatem modi doloremque ipsam excepturi recusandae, ad 
+          consectetur alias distinctio suscipit repellendus explicabo, dignissimos saepe nemo cum! 
+          Natus, illo commodi.
+      </p>
+
+      <!-- <p style="font-weight: bold;">Available Colors</p>
+
+      <div class="various_colors">
+        <div class="product_color active_color">
+          <img src="images/1.jpg" alt="">
+        </div>
+
+        <div class="product_color">
+          <img src="images/2.jpg" alt="">
+        </div>
+
+        <div class="product_color">
+          <img src="images/3.jpg" alt="">
+        </div>
+        <div class="product_color">
+          <img src="images/4.jpg" alt="">
+        </div>
+
+        <div class="product_color">
+          <img src="images/5.jpg" alt="">
+        </div>
+
+        <div class="product_color">
+          <img src="images/6.jpg" alt="">
+        </div>
+      </div> -->
+
+      <p style="font-weight: bold;">Size</p>
+
+      <div class="pagination_container" style="
+        justify-content:flex-start; 
+        width: 100%; gap: 10px;
+        flex-wrap: wrap;
+      ">
+        <div class="active_page">S</div>
+        <div>M</div>
+        <div>L</div>
+        <div>XL</div>
+      </div>
+
+      <div class="completion_buttons">
+        <div class="add_button">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Add To Cart
+        </div>
+        <div class="other_buttons">
+          <div class="love_button">
+            <i class="fa-regular fa-heart" style="font-size: 1.2em;"></i>
+          </div>
+          <div class="love_button">
+            <svg style="width: 1em; height: 1em" fill="white" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>share-nodes</title> <path d="M26 20.75c-1.594 0.006-3.019 0.726-3.972 1.856l-0.006 0.008-10.91-5.455c0.088-0.348 0.139-0.747 0.139-1.159s-0.050-0.811-0.146-1.193l0.007 0.034 10.911-5.455c0.963 1.109 2.374 1.806 3.949 1.806 2.883 0 5.221-2.338 5.221-5.221s-2.337-5.221-5.221-5.221c-2.883 0-5.221 2.337-5.221 5.221 0 0.010 0 0.020 0 0.031v-0.002c0.003 0.412 0.053 0.811 0.146 1.194l-0.007-0.036-10.911 5.455c-0.969-1.143-2.406-1.864-4.012-1.864-2.9 0-5.25 2.351-5.25 5.25s2.351 5.25 5.25 5.25c1.606 0 3.043-0.721 4.006-1.857l0.006-0.008 10.911 5.455c-0.082 0.347-0.129 0.745-0.129 1.154 0 2.897 2.348 5.245 5.245 5.245s5.245-2.348 5.245-5.245c0-2.897-2.348-5.245-5.245-5.245-0.002 0-0.004 0-0.005 0h0zM26 3.25c1.519 0 2.75 1.231 2.75 2.75s-1.231 2.75-2.75 2.75c-1.519 0-2.75-1.231-2.75-2.75v0c0.002-1.518 1.232-2.748 2.75-2.75h0zM6 18.75c-1.519 0-2.75-1.231-2.75-2.75s1.231-2.75 2.75-2.75c1.519 0 2.75 1.231 2.75 2.75v0c-0.002 1.518-1.232 2.748-2.75 2.75h-0zM26 28.75c-1.519 0-2.75-1.231-2.75-2.75s1.231-2.75 2.75-2.75c1.519 0 2.75 1.231 2.75 2.75v0c-0.002 1.518-1.232 2.748-2.75 2.75h-0z"></path> </g></svg>
+            <!-- <i class="fa-solid fa-share-nodes" style="font-size: 1.2em;"></i> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <h3 style="padding: 10px 0 0 20px;">This item can be cool with</h3>
+
+  <div class="featured_products" style="padding: 20px;">
+
+  </div>
+
+  <div class="general_reviews_container">
+    <div class="reviews_section">
+      <div class="title_plus_overview">
+        <h3>Customer Reviews</h3>
+
+        <div class="star_container">
+          <div class="star_reviews">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star" style="color: grey"></i>
+          </div>
+          <p>(4.6) | 200 ratings</p>
+        </div>
+      </div>
+
+      <div class="sort_container">
+        <p>Sort reviews to find the most relevant feedback for your needs</p>
+
+        <select name="" id="">
+          <option value="">Recent</option>
+          <option value="">Highest Rated</option>
+          <option value="">Lowest Rated</option>
+          <option value="">Verified</option>
+        </select>
+      </div>
+
+      <div class="reviews_container">
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Helen M</p>
+              <p>Yesterday</p>
+            </div>
+
+            <div class="star_reviews">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star" style="color: grey"></i>
+            </div>
+            
+            <div class="verify">
+              <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div>
+            </div>
+
+            <p>Best Purchase I've made all year, highly recommend it.</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <span>200</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-regular fa-thumbs-down thumbs_down_spin"></i>
+                  <span>19</span>
+                </a>
+              </div>
+
+              <a href="" class="report">Report</a>
+            </div>
+
+            <div class="seller_response">
+              <div class="name_and_time" style="justify-content: space-between;">
+                <p>Vince Vineyard</p>
+                <p>1 hr ago</p>
+              </div>
+              <p>
+                This is going to be an encouraging text we will send our customers so 
+                they keep working with us.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Helen M</p>
+              <p>Yesterday</p>
+            </div>
+
+            <div class="star_reviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+              </div>
+
+            <p>Excellent Running shoes</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span>30</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-regular fa-thumbs-down thumbs_down_spin"></i>
+                  <span>1</span>
+                </a>
+              </div>
+
+              <a href="" class="report">Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Gerald Darko</p>
+              <p>20/11/2025</p>
+            </div>
+
+            <div class="star_reviews">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star" style="color: grey"></i>
+              <i class="fa-solid fa-star" style="color: grey"></i>
+            </div>
+            
+            <div class="verify">
+              <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div>
+            </div>
+
+            <p>Best Purchase I've made all year, highly recommend it.</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <span>17</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-thumbs-down thumbs_down_spin"></i>
+                  <span>19</span>
+                </a>
+              </div>
+
+              <a href="" class="report">Report</a>
+            </div>
+
+            <div class="seller_response">
+              <div class="name_and_time" style="justify-content: space-between;">
+                <p>Vince Vineyard</p>
+                <p>1 hr ago</p>
+              </div>
+              <p>
+                This is going to be an encouraging text we will send our customers so 
+                they keep working with us
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="" class="show_more">Show more reviews</a>
+    </div>
+
+    <form method="post" class="user_review_container">
+      <h3>Write a Review</h3>
+
+      <p>Your Rating*</p>
+
+      <div class="star_container personal_review_container">
+        <div class="star_reviews">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>  
+      </div>
+
+      <label for="">Review Title (Optional)</label>
+
+      <input type="text" placeholder="Summarize your experience">
+
+      <label for="">Your Review *</label>
+
+      <textarea placeholder="Share your thoughts about this product..."></textarea>
+
+      <button>
+        <i class="fa-solid fa-paper-plane"></i>
+        Submit Review
+      </button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer_container">
+        <div class="company_section">
+            <div class="company_info">
+                <h3 class="company_title">StyleCraft</h3>
+                <p class="company_description">
+                    Discover premium fashion and lifestyle products curated for the modern individual. 
+                    Quality craftsmanship meets contemporary design.
+                </p>
+            </div>
+
+            <div class="contact_info">
+                <a href="tel:+233548448856" class="contact_item">
+                    <i class="fas fa-phone contact_icon"></i>
+                    <span>1-800-STYLE-01</span>
+                </a>
+                <a href="mailto:darkobekoegerald2@gmail.com" class="contact_item">
+                    <i class="fas fa-envelope contact_icon"></i>
+                    <span>hello@stylecraft.com</span>
+                </a>
+                <a href="#" class="contact_item">
+                    <i class="fas fa-map-marker-alt contact_icon"></i>
+                    <span>123 Fashion Ave, NY 10001</span>
+                </a>
+            </div>
+
+            <div class="social_section">
+                <h4 class="social_title">Follow Us</h4>
+                <div class="social_links">
+                    <a href="#" class="social_link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social_link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social_link" aria-label="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social_link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="links_section">
+            <div class="link_column">
+                <h4 class="section-title">Quick Links</h4>
+                <div class="link-list">
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Press</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">Affiliate Program</a>
+                </div>
+            </div>
+
+            <div class="link_column">
+                <h4 class="section-title">Customer Service</h4>
+                <div class="link-list">
+                    <a href="#" class="footer-link">Help Center</a>
+                    <a href="#" class="footer-link">Returns & Exchanges</a>
+                    <a href="#" class="footer-link">Shipping Info</a>
+                    <a href="#" class="footer-link">Size Guide</a>
+                    <a href="#" class="footer-link">Track Your Order</a>
+                    <a href="#" class="footer-link">Customer Reviews</a>
+                </div>
+            </div>
+
+            <div class="link_column">
+                <h4 class="section-title">Legal</h4>
+                <div class="link-list">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
+                    <a href="#" class="footer-link">Accessibility</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                </div>
+            </div>
+
+            <div class="trust_section">
+                <h4 class="section-title">Why Shop With Us</h4>
+
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-shipping-fast trust-icon"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-undo trust-icon"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt trust-icon"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-credit-card trust-icon"></i>
+                        <span>Buy Now Pay Later</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Ecommerce. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
+  <script src="./js/sidebarcontroller.js"></script>
+	<script src="./js/primarysearch.js"></script>
+	<script src="./js/nav_icon_click.js"></script>
+  <!-- page specific scripts below -->
+  <script src="./js/product_page.js"></script>
+  <script src="./js/product_page_video_and_products.js"></script>
+</body>
+</html>
