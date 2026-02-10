@@ -1,0 +1,194 @@
+main{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+main .details_section{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+}
+
+main .details_section h3{
+    font-weight: normal;
+}
+
+main .details_section .map_container{
+    background: url(../images/placeholder.png) no-repeat center/cover;
+    height: 60vh;
+    width: 100%;
+}
+
+main .details_section .order_details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .details_section .order_details .order_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* flex: 1; */
+}
+
+main .details_section .order_details .order_detail .first{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .details_section .order_details .order_detail .first i{
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d3d3d3;
+}
+
+main .details_section .order_details .order_detail .first p{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+main .details_section .order_details .order_detail .first span{
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #6b7280;
+}
+
+main .details_section .both_locations{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_progress{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.point{
+    padding: 10px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointless{
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.hole{
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progress_bar{
+    overflow: hidden;
+    padding: 2px;
+    height: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    flex: 1;
+    position: relative;
+}
+
+.progress_fill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+}
+
+.total_progress .timeline{
+    position: absolute;
+    width: 95%;
+    height: 30px;
+}
+
+.total_progress img{
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+/*    make left 101% when completed*/
+    left: 85%;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+button:hover{
+    background-color: #28a745;   
+}
+
+@media(max-width: 800px){
+    main{
+        flex-direction: column;
+    }
+
+    main .details_section .order_details{
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+
+    main .details_section .map_container{
+        height: 40vh;
+    }
+
+    .contact_courier{
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact_courier button{
+        flex: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .image_container:hover, .active{
+        background-color: rgba(255,255,255,0.06);
+    }
+
+    main .details_section .order_details .order_detail .first i{
+        color: white;
+        background-color: rgba(255,255,255,0.06);
+    }
+
+    .progress_bar{
+        background-color: #3a3a3a;
+    }
+
+    .pointless{
+        background-color: #3a3a3a;
+    }
+
+    .hole{
+        background-color: #121212;
+    }
+}

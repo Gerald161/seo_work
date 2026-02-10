@@ -1,0 +1,340 @@
+main{
+  display: flex;
+  padding: 20px;
+}
+
+.general_reviews_container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.general_reviews_container .reviews_section{
+  padding: 20px;
+  flex: 2;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.general_reviews_container .reviews_section .title_plus_overview{
+  display: flex;
+  justify-content: space-between;
+}
+
+.general_reviews_container .reviews_section .sort_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 20px;
+}
+
+.general_reviews_container .reviews_section .sort_container p{
+  color: grey;
+}
+
+.general_reviews_container .reviews_section select{
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.general_reviews_container .reviews_section select:hover{
+  border-color: #007bff;
+  background-color: #eef7ff;
+}
+
+.general_reviews_container .reviews_section select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.general_reviews_container .reviews_section .reviews_container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .user_image{
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background: url(../images/avatar.jpg) no-repeat center/cover;
+  align-self: flex-start;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container form{
+  display: flex;
+  gap: 10px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container button{
+  cursor: pointer;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  transition: all 0.5s;
+  pointer-events: initial;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container button:hover{
+  background-color: #1e6fd9;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container p{
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time{
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
+p{
+  font-weight: bold;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
+p:nth-child(2){
+  color: #4A4A4A;
+}
+
+.verify{
+  display: flex;  
+  gap: 5px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .check_container{
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #28A745;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons{
+  display: flex;
+  gap: 30px;
+  font-size: 1em;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a{
+  transition: color 0.5s;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a:hover{
+  color: dodgerblue;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a span{
+  margin-left: 4px;
+}
+
+.thumbs_down_spin{
+  transform: rotate(-180deg); 
+  scale: 1 -1;
+}
+
+.report{
+  text-decoration: underline; 
+  margin-left: 20px; 
+  font-weight: 600;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.seller_response{
+  flex: 1;
+  background-color: #ccc;
+  padding: 10px 15px;
+  /* max-width: 450px; */
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.show_more{
+  transition: all 0.5s;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-left: 59px;
+  color: dodgerblue;
+}
+
+.show_more:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+.user_review_container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+  max-height: 500px;
+  margin-bottom: 20px;
+}
+
+.personal_review_container .star_reviews{
+  font-size: 1.5em;
+  flex-direction: row-reverse;
+}
+
+.personal_review_container .star_reviews i{
+  color: grey;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.personal_review_container .star_reviews 
+i:hover, .personal_review_container .star_reviews 
+i:hover ~ i
+{
+  color: black;
+}
+
+.user_review_container button{
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  transition: background-color 0.5s;
+  pointer-events: initial;
+  border-radius: 7px;
+}
+
+.user_review_container button:hover{
+	background-color: #059669;
+}
+
+@media(max-width: 900px){
+  .general_reviews_container{
+    flex-direction: column;
+  }
+
+  .general_reviews_container .reviews_section .sort_container{
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: none;
+    align-items: flex-start;
+  }
+
+  .general_reviews_container .reviews_section .title_plus_overview{
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container input{
+    width: 190px;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+  .helpful_container .thumb_icons{
+    gap: 10px;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+  .helpful_container .thumb_icons a span{
+    margin-left: 0;
+  }
+
+  .report{
+    margin-left: 0; 
+  }
+
+  .user_review_container{
+    border-radius: 0;
+  }
+}
+
+@media(prefers-color-scheme: dark){
+  .general_reviews_container .reviews_section select{
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 2px solid #444;
+  }
+
+  .general_reviews_container .reviews_section select:hover{
+    border-color: #66b2ff;
+    background-color: #2a2a2a;
+  }
+
+  .general_reviews_container .reviews_section select:focus{
+    border-color: #66b2ff;
+    box-shadow: 0 0 4px rgba(102, 178, 255, 0.5);
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+  .seller_response{
+    background-color: #2a2a2a;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
+  p:nth-child(2){
+    color: grey;
+  }
+
+  .personal_review_container .star_reviews 
+  i:hover, .personal_review_container .star_reviews 
+  i:hover ~ i
+  {
+    color: white;
+  }
+
+  .show_more:hover{
+    background-color: #2a2a2a;
+  }
+
+  .user_review_container{
+    background-color: #222222;
+  }
+}

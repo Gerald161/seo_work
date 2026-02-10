@@ -1,0 +1,214 @@
+/* Base styles and CSS variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-footer: #e0e0e0;
+    --bg-footer-bottom: #d0d0d0;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-footer: #1f2937;
+    --text-footer-secondary: #4b5563;
+    --text-footer-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --card-bg: #ffffff;
+    --social-bg: #d1d5db;
+    --social-hover: #3b82f6;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #121212;
+        --bg-secondary: #1e1e1e;
+        --bg-footer: #1f1f1f;
+        --bg-footer-bottom: #0f0f0f;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-footer: #ffffff;
+        --text-footer-secondary: #d1d5db;
+        --text-footer-muted: #9ca3af;
+        --border-color: #27272a;
+        --accent-color: #3b82f6;
+        --accent-hover: #2563eb;
+        --card-bg: #1e1e1e;
+        --social-bg: #374151;
+        --social-hover: #3b82f6;
+    }
+}
+
+footer{
+    background: var(--bg-footer);
+    color: var(--text-footer);
+}
+
+.footer_container{
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.footer_container .company_section{
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.footer_container .company_section .company_title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-footer);
+    margin-bottom: 1rem;
+}
+
+.footer_container .company_section .company_description{
+    color: var(--text-footer-secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.footer_container .company_section .contact_info{
+    margin-bottom: 2rem;
+}
+
+.footer_container .company_section .contact_info .contact_item{
+    display: flex;
+    align-items: center;
+    color: var(--text-footer-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+    transition: color 0.6s;
+}
+
+.footer_container .company_section .contact_info .contact_item:hover{
+    color: dodgerblue;
+}
+
+.footer_container .company_section .contact_info .contact_item .contact_icon{
+    width: 1rem;
+    margin-right: 0.75rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.social_section h4{
+    font-weight: 600;
+    color: var(--text-footer);
+    margin-bottom: 1rem;
+}
+
+.social_links{
+    display: flex;
+    gap: 1rem;
+}
+
+.social_link{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--social-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-footer-secondary);
+}
+
+.social_link:hover{
+    background-color: var(--social-hover);
+    transform: translateY(-2px);
+    color: var(--text-footer);
+}
+
+.social_link i{
+    font-size: 1.125rem;
+    transition: color 0.3s ease;
+}
+
+.footer_container .links_section{
+    flex: 2;
+    display: flex;
+}
+
+.footer_container .links_section .link_column,
+.footer_container .links_section .trust_section
+{
+    flex: 1;
+}
+
+.section-title {
+    font-weight: 600;
+    color: var(--text-footer);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.link-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-link {
+    color: var(--text-footer-secondary);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.footer-link:hover {
+    color: var(--text-footer);
+    transform: translateX(0.25rem);
+}
+
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-footer-secondary);
+    font-size: 0.75rem;
+}
+
+.trust-icon {
+    width: 1rem;
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-footer-bottom);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer_container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer_container .links_section{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-title {
+        margin-bottom: 1.5rem;
+    }
+}

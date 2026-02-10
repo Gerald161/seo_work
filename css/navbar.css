@@ -1,0 +1,418 @@
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: white;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	padding: 15px;
+	gap: 5px;
+}
+
+nav .ham_and_icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav .logo img{ 
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+nav .more_options{
+	display: flex;
+	gap: 35px;
+}
+
+nav .more_options a, nav .more_options div{
+	display: flex; 
+	gap: 5px; 
+	align-items: center;
+}
+
+nav .more_options .tooltip > i{
+    padding: 13px;
+    border-radius: 100%;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+nav .more_options .tooltip > i:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+nav .more_options .notifications_button{
+    position: relative;
+}
+
+nav .more_options .notifications_button .number_of_notifications{
+    position: absolute;
+    right: -6px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    pointer-events: none;
+}
+
+.show_display{
+    display: flex !important;
+}
+
+.tooltip{
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip .tooltip_text{
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.tooltip:last-child .tooltip_text{
+    left: -25px;
+}
+
+.tooltip:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav .more_options .tooltip .stuff{
+    width: 100%;
+    font-size: 1.1em;
+    padding-top: 15px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+nav .more_options .tooltip .mark_all{
+    transition: all 0.5s;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+nav .more_options .tooltip .mark_all:hover{
+    color: dodgerblue;
+}
+
+.message_container .both{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_container .both .dot{
+    padding: 5px;
+    border-radius: 100%;
+    background-color: dodgerblue;
+}
+
+nav .nav_icon_container{
+    display: none !important;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .nav_icon_container div{
+    cursor: pointer;
+}
+
+nav .nav_icon_container .mobile_notification_container{
+    position: relative;
+}
+
+nav .nav_icon_container .mobile_notification_container .number_of_notifications{
+    position: absolute;
+    right: -12px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.nav_icon{
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.nav_icon:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+header form{
+    width: 50%;
+    display: flex;
+    gap: 5px;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.second_form{
+	display: none;
+    pointer-events: none;
+    opacity: 0;
+    max-height: 0;
+    /* below is to unset it for the small screen */
+    width: initial;
+    flex: 1;
+}
+
+/* below is to unset it for the small screen */
+.second_form input{
+    width: initial;
+    flex: 1;
+    padding-right: 87px;
+}
+
+header form input{
+    width: 100%;
+    padding-right: 82px;
+}
+
+header form .search_suggestions{
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    display: none;
+}
+
+/* from the categories css */
+.categories_container{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.form_options{
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.fa-xmark{
+    cursor: pointer;
+    font-size: 1.2em;
+    color: black;
+    border-radius: 100%;
+    padding: 5px 7px;
+    transition: all 0.5s;
+}
+
+.divider{
+    color: #ccc;
+    pointer-events: none;
+}
+
+.camera_upload{
+    font-size: 1.2em;
+    border-radius: 100%;
+    padding: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* for the typing part */
+.form_options .clear_search{
+    display: none;
+}
+
+.fa-xmark:hover, .camera_upload:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+header form .search_suggestions a{
+    text-decoration: none;
+    transition: all 0.5s;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header form .search_suggestions a:hover{
+    background: #B3B3B3;
+    color: black !important;
+}
+
+.show_header{
+	/* for first header */
+	max-width: 100%;
+	pointer-events: all;
+	position: relative;
+	/* it ends here */
+    opacity: 1;
+    max-height: 300px;
+}
+
+header form button{
+    cursor: pointer;
+    padding: 7px 9px;
+    max-width: fit-content;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.5s;
+    border-radius: 100%;
+    margin-right: 2px;
+}
+
+header form button:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+header form button i{
+    font-size: 1.2em;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.second_form .form_options{
+    right: 10px;
+}
+
+@media(max-width: 700px){
+    nav{
+        padding: 15px 7px;
+    }
+
+    nav .ham_and_icon{
+        flex: 1;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    nav .ham_and_icon .logo {
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%);
+    }
+
+	nav .more_options{
+		display: none;
+	}
+
+	nav .nav_icon_container{
+        margin-right: 10px;
+		display: flex !important;
+	}
+
+    .nav_icon{
+        display: block;
+    }
+
+	.first_form{
+		display: none !important;
+	}
+
+	.second_form{
+		display: flex !important;
+        pointer-events: initial;
+	}
+
+    header form input{
+        padding-right: 0;
+        margin: 0 8px;
+    }
+
+	.show_header{
+		padding-bottom: 10px;
+	}
+
+    .header_overlay{
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .tooltip .tooltip_text {
+        background-color: #ccc;
+        color: black;
+    }
+
+    header{
+        background-color: #121212;
+    }
+
+    .nav_icon{
+        color: white;
+    }
+
+    .nav_icon:hover{
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    header form .search_suggestions{
+        background-color: #333333;
+    }
+
+    header form .search_suggestions a:hover{
+        background: #222222;
+        color: white !important;
+    }
+
+    .divider{
+        color: #4a4a4a;
+    }
+
+    /*camera upload take off in a framework*/
+    .fa-xmark:hover, .camera_upload:hover, header form button:hover{
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    .camera_upload, header form button i{
+        color: white;
+    }
+
+    nav .nav_icon_container div, .fa-xmark, nav .more_options .tooltip .mark_all{
+        color: white;
+    }
+}

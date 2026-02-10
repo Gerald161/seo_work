@@ -1,0 +1,137 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_step_container{
+    min-width: 60%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: solid 1px #b6bbc4;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #eaeaea;
+}
+
+.step_num, .step_num_incomplete{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step_num p{
+    color: #2563eb;
+}
+
+.num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+}
+
+.step_num_incomplete .num{
+    border:#d1d5db solid 2px;
+    color: #9ca3af;
+    background-color: transparent;
+}
+
+.step_num_incomplete p{
+    color: #9ca3af;
+}
+
+.step_dash{
+    padding: 2px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #d1d5db;
+    position: relative;
+    top: -12px;
+}
+
+#complete_dash{
+    background-color: #2563eb;
+}
+
+.shopping_cart_container{
+    border: solid 1px #b6bbc4;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 60%;
+    margin-bottom: 20px;
+}
+
+.shopping_cart_container .title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.shopping_cart_container .title h2{
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+.cart_items_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart_items_container .container{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #d0d4da;
+    background-color: #e8eaee;
+}
+
+@media (prefers-color-scheme: dark){
+    .num{
+        background-color: #1e3a8a;
+    }
+
+    #complete_dash{
+        background-color: #1e3a8a;
+    }
+
+    .step_dash{
+        background-color: #4b5563;
+    }
+
+    .step_num_incomplete .num{
+        border:#4b5563 solid 2px;
+        color: #4b5563;
+    }
+
+    .step_num_incomplete p{
+        color: #4b5563;
+    }
+
+    .cart_step_container, .shopping_cart_container{
+        border: solid 1px #222222;
+        background-color: #1a1a1a;
+    }
+
+    .shopping_cart_container .title svg{
+        color: white;
+    }
+
+    .cart_items_container .container{
+        border: solid 1px #404040;
+        background-color: #303030;
+    }
+}

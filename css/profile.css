@@ -1,0 +1,157 @@
+main{
+    display: flex;
+    padding: 20px 0;
+}
+
+.settings_nav_section{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings_nav_section .selected_nav{
+    background: #e0e0e0;
+}
+
+.settings_nav_section a{
+    transition: all 0.5s;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings_nav_section a:hover{
+    background-color: #e0e0e0;
+}
+
+.settings_config_section{
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.profile_change_container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile_change_container .profile_pic{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.profile_change_container .profile_pic img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_change_container .profile_pic .icon_cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.profile_change_container .profile_pic .icon_cont:hover{
+    opacity: 1;
+}
+
+.profile_change_container .profile_pic .icon_cont i{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    /* margin-left: auto; */
+}
+
+.profile_change_container input[type='file']{
+	display: none;
+    pointer-events: none;
+}
+
+.profile_change_container label{
+    cursor: pointer;
+}
+
+.settings_config_section form{
+    max-width: 500px;
+}
+
+.settings_config_section form, .settings_config_section form .label_plus_input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings_config_section form .all_names{
+    display: flex;
+    gap: 10px;
+}
+
+.settings_config_section form .label_plus_input input{
+    width: 100%;
+}
+
+.settings_config_section form button{
+    cursor: pointer;
+    padding: 10px 20px;
+    max-width: fit-content;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    transition: background-color 0.5s;
+    pointer-events: initial;
+    border-radius: 10px;
+}
+
+.settings_config_section form button:hover{
+	background-color: orangered;
+}
+
+@media(max-width: 768px){
+    .settings_nav_section{
+        display: none;
+    }
+
+    .settings_config_section{
+        align-items: center;
+    }
+
+    .settings_config_section form .button_cont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .settings_nav_section,
+    .settings_config_section {
+        background: #1e1e1e;
+    }
+
+    .settings_nav_section{
+        border-right: solid 1px #2a2a2a;
+    }
+
+    .settings_nav_section a:hover{
+        background: #2a2a2a;
+    }
+
+    .settings_nav_section .selected_nav{
+        background: #333333;
+    }
+}

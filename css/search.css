@@ -1,0 +1,256 @@
+.mobile_filter_options{
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-top: solid 1px #ccc;
+  overflow: auto;
+  display: none;
+}
+
+.mobile_filter_options .option{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  min-width: fit-content;
+}
+
+.mobile_filter_options .option i{
+  color: black;
+}
+
+.mobile_filter_options .option svg{
+  fill: black;
+}
+
+.category_classifications{
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.category_classifications img{
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.category_classifications .description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+main{
+  display: flex;
+  margin-bottom: 5px;
+  padding: 0;
+}
+  
+main .filter_options_section{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 68vh;
+  top: 76px;
+  position: sticky;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+main .filter_results_section{
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: solid 1px #ccc;
+  padding: 15px;
+}
+
+.sort_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort_container h3{
+  font-weight: normal;
+}
+
+main .filter_options_section .filter_section{
+  width: 100%;
+  margin-top: 8px;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option{
+  cursor: pointer;
+  align-items: center;
+  gap: 20px;
+  border-bottom: solid 1px #ccc;
+  margin-right: 18px;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option:nth-child(2){
+  border-top: solid 1px #ccc;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option .option{
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  transition: all 0.6s;
+  padding: 15px;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option .option:hover{
+  background: #e0e0e0;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option .option p{
+  font-size: 1.1em;
+}
+
+.arrow{
+  transition: transform 0.3s !important;
+}
+
+.active_arrow{
+  transform: rotate(180deg);
+}
+
+.active_filter{
+  max-height: 300px !important;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option a{
+  text-decoration: none;
+  color: black;
+  transition: all 0.6s;
+}
+
+.page_numbering_section{
+  text-align: center; 
+  margin-top: 25px;
+}
+
+.navigation_container{
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  justify-content: space-between;
+}
+
+.pagination_container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination_container div{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.pagination_container div:hover{
+  background-color: #ccc;
+  color: black;
+}  
+
+.active_page{
+  background-color: #ccc !important;
+  color: black !important;
+}
+
+/* below is for when option is opened with js */
+.opened_option{
+  background-color: #e0e0e0;
+}
+
+@media(max-width: 700px){
+  .mobile_filter_options{
+    display: flex;
+  }
+
+  .category_classifications{
+    justify-content: normal;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  main{
+    flex-direction: column;
+  }
+
+  .result_for_text{
+    text-align: center;
+  }
+}
+
+
+@media (prefers-color-scheme: dark){
+  .mobile_filter_options .option i{
+    color: white;
+  }
+
+  .mobile_filter_options .option svg{
+    fill: white;
+  }
+
+  .page_numbering_section, 
+  .pagination_container div{
+    color: white;
+  }
+
+  .pagination_container div{
+    background-color: #222222; 
+  }
+
+  .pagination_container div:hover{
+    color: black;
+  }
+
+  main .filter_results_section{
+    border-left: solid 1px #222222;
+  }
+
+  main .filter_options_section .filter_section .filter_options_section_option{
+    border-bottom: solid 1px #222222;
+  }
+
+  main .filter_options_section .filter_section .filter_options_section_option:nth-child(2){
+    border-top: solid 1px #222222;
+  }
+
+  .category_classifications{
+    border-top: solid 1px #222222;
+    border-bottom: solid 1px #222222;
+  }
+
+  /* .opened_option below is for when option is opened with js */
+  main .filter_options_section .filter_section .filter_options_section_option .option:hover,
+  .mobile_filter_options .option, .opened_option{
+    background: #2a2a2a;
+  }
+
+  .mobile_filter_options{
+    border-top: solid 1px #222222;
+  }
+
+  main .filter_options_section .filter_section .filter_options_section_option a{
+    color: white;
+  }
+}

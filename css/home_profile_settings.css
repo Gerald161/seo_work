@@ -1,0 +1,51 @@
+nav .more_options .tooltip .profile_settings_container{
+    position: absolute;
+    top: 124%;
+    left: -105px;
+    width: 160px;
+    background-color: #eee;
+    color: black;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    cursor: default;
+    overflow: hidden;
+    border-radius: 10px;
+    gap: 0;
+}
+
+nav .more_options .tooltip .profile_settings_container .profile_option{
+    width: 100%;
+    transition: background-color 0.7s;
+    gap: 0;
+}
+
+nav .more_options .tooltip .profile_settings_container .profile_option:hover{
+    background-color: #ccc;
+}
+
+nav .more_options .tooltip .profile_settings_container .profile_option i{
+    padding: 13px;
+}
+
+nav .more_options .tooltip .profile_settings_container .profile_option i:hover{
+    background-color: initial;
+}
+
+@media (prefers-color-scheme: dark){
+    nav .more_options .tooltip .profile_settings_container .profile_option:hover{
+        background-color: #333333;
+    }
+
+    .profile_settings_container .all_notifications .notification .message_container .response{
+        background-color: #3e3e3e;
+    }
+
+    nav .more_options .tooltip .profile_settings_container{
+        background-color: #4A4A4A;
+    }
+
+    .profile_settings_container .all_notifications .notification:hover{
+        background-color: #333333;
+    }
+}

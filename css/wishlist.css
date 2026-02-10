@@ -1,0 +1,94 @@
+.wishlist_categories{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.wishlist_categories a{
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 20px;
+    background: var(--surface);
+    transition: all 0.5s;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.wishlist_categories a:hover{
+    background-color: #d3d3d3;
+}
+
+/* do not forget to replace below code */
+.filter_orders_container .filters_container .filter_group{
+    flex: initial;
+}
+
+.filter_orders_container .filters_container .filter_group:nth-child(1){
+    /* width: 40%; */
+    flex-basis: 60%;
+}
+
+.filter_orders_container .filters_container .filter_group:nth-child(2){
+    flex-basis: 30%;
+}
+
+.featured_products{
+    margin: 20px 0;
+}
+
+.page_numbering_section{
+  text-align: center; 
+  margin-top: 40px;
+}
+
+.navigation_container{
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  justify-content: space-between;
+}
+
+.pagination_container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination_container div{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.pagination_container div:hover{
+  background-color: #ccc;
+  color: black;
+}  
+
+.active_page{
+  background-color: #ccc !important;
+  color: black !important;
+}
+
+/* ends here */
+
+@media (prefers-color-scheme: dark) {
+    .wishlist_categories a:hover{
+        background-color: rgba(255,255,255,0.04);
+    }
+
+    .page_numbering_section, 
+    .pagination_container div{
+        color: white;
+    }
+
+    .pagination_container div{
+        background-color: #222222; 
+    }
+
+    .pagination_container div:hover{
+        color: black;
+    }
+}
