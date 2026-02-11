@@ -105,7 +105,8 @@ var startX = 0;
 var currentX = 0;
 var isDragging = false;
 var startTransform = 0;
-var itemsLength = 3 //based on amount of images + videos
+
+var itemsLength = additional_images.length - 1 //based on amount of images + videos
 
 images_container.addEventListener("mousedown", (e)=>{handleStart(e)});
 
