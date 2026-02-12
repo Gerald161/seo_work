@@ -1,8 +1,8 @@
 var additional_images_container = document.querySelector("#additional_images_container");
 
-var next = document.querySelector('.next');
+// var next = document.querySelector('.next');
 
-var prev = document.querySelector('.prev');
+// var prev = document.querySelector('.prev');
 
 var slider = document.querySelector('.all_images');
 
@@ -94,37 +94,37 @@ async function getProductDetails(){
                     max_index = index;
                 })
 
-                next.addEventListener("click", (e)=>{
-                    slider.style.transition = 'all 0.7s';
+                // next.addEventListener("click", (e)=>{
+                //     slider.style.transition = 'all 0.7s';
 
-                    document.querySelector(".active").classList.remove("active");
+                //     document.querySelector(".active").classList.remove("active");
 
-                    slideRight();
-                })
+                //     slideRight();
+                // })
 
-                prev.addEventListener("click", (e)=>{
-                    slider.style.transition = 'all 0.7s';
+                // prev.addEventListener("click", (e)=>{
+                //     slider.style.transition = 'all 0.7s';
 
-                    document.querySelector(".active").classList.remove("active");
+                //     document.querySelector(".active").classList.remove("active");
 
-                    if(selected_index == 0){
-                        selected_index = max_index;
+                //     if(selected_index == 0){
+                //         selected_index = max_index;
 
-                        slider.animate([{opacity:'0.2'},{opacity:"1.0"}],{duration:500,fill:'forwards'});
+                //         slider.animate([{opacity:'0.2'},{opacity:"1.0"}],{duration:500,fill:'forwards'});
 
-                        slider.style.transition = 'all 0s';
+                //         slider.style.transition = 'all 0s';
 
-                        slider.style.left = `-${current_slider_value * selected_index}vw`;
+                //         slider.style.left = `-${current_slider_value * selected_index}vw`;
                         
-                        additional_images[selected_index].classList.add("active");
-                    }else{
-                        slider.style.left = `-${current_slider_value * (selected_index - 1)}vw`;
+                //         additional_images[selected_index].classList.add("active");
+                //     }else{
+                //         slider.style.left = `-${current_slider_value * (selected_index - 1)}vw`;
 
-                        selected_index--;
+                //         selected_index--;
 
-                        additional_images[selected_index].classList.add("active");
-                    }
-                })
+                //         additional_images[selected_index].classList.add("active");
+                //     }
+                // })
 
                 function slideRight(){
                     if(selected_index == max_index){
@@ -257,9 +257,9 @@ async function getProductDetails(){
                     <img src="http://127.0.0.1:8000/${res.product.images[0]}" data-left="" alt="${res.product.images[0]}">
                 `
 
-                next.style.display = "none";
+                // next.style.display = "none";
 
-                prev.style.display = "none";
+                // prev.style.display = "none";
             }
         }else{
             window.location.href = "/";
