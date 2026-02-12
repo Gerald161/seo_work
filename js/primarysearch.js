@@ -38,7 +38,7 @@ allInputs.forEach((input, index)=>{
 
             filtered_suggestions.forEach((word)=>{
                 searchSuggestions[index].innerHTML += `
-                    <a href="search.html">
+                    <a href="search.html?q=${word}">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <p>${word}</p>
                     </a>

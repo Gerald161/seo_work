@@ -33,7 +33,7 @@
 			</div>
 
 			<form action="search.html" class="first_form">
-				<input type="text" placeholder="What are you looking for..." required>
+				<input type="text" name="q" placeholder="What are you looking for..." required>
 				<div class="form_options">
 					<i class="fa-solid fa-xmark clear_search"></i>
 					<label for="picture">
@@ -63,24 +63,11 @@
 						<p>Search</p>
 					</a> -->
 				</div>
-				<div class="search_ideas">
-					<h3>Ideas for you</h3>
-
-					<div class="categories_container">
-						
-					</div>
-
-					<h3>Popular on Vince Search</h3>
-
-					<div class="categories_container">
-						
-					</div>
-				</div>
 			</form>
 
 			<div class="more_options">
-				<a href="#" class="tooltip">
-					<span class="tooltip_text">Favorites</span>
+				<a href="wishlist.html" class="tooltip">
+					<span class="tooltip_text">Wishlist</span>
 					<i class="fa-regular fa-heart"></i>
 				  </a>
 
@@ -119,7 +106,6 @@
 								<div class="title_and_details">
 									<div class="title_and_status">
 										<p class="text_warning">Your order will expire</p>
-										<!-- <div class="unread_dot"></div> -->
 									</div>
 									<p class="detail">Complete your purchase soon to secure your items.</p>
 
@@ -180,17 +166,17 @@
 					<span class="tooltip_text">Log/Sign in</span>
 					<i class="fa-regular fa-circle-user show_more_nav_icon"></i>
 					<div class="profile_settings_container">
-						<a href="profile.html" class="profile_option">
+						<!-- <a href="profile.html" class="profile_option">
 							<i class="fa-duotone fa-solid fa-gear"></i>
 							<p>Settings</p>
-						</a>
+						</a> -->
 
 						<a href="orders.html" class="profile_option">
 							<i class="fa-solid fa-box-open"></i>
 							<p>Orders</p>
 						</a>
 
-						<a href="client_orders.html" class="profile_option">
+						<!-- <a href="client_orders.html" class="profile_option">
 							<i class="fa-solid fa-box-open"></i>
 							<p>Client Orders</p>
 						</a>
@@ -198,17 +184,17 @@
 						<a href="signinnew.html" class="profile_option">
 							<i class="fa-solid fa-user"></i>
 							<p>Sign in</p>
-						</a>
+						</a> -->
 
 						<a href="upload.html" class="profile_option">
 							<i class="fa-solid fa-upload"></i>
 							<p>Upload</p>
 						</a>
 						
-						<a href="#" class="profile_option">
+						<!-- <a href="#" class="profile_option">
 							<i class="fa-solid fa-arrow-right-from-bracket"></i>
 							<p>Logout</p>
-						</a>						
+						</a>						 -->
 					</div>
 				</div>
 			</div>
@@ -896,19 +882,19 @@
   
     <div class="filter_results_section">
       <div class="sort_container">
-		<h3>Results for search...</h3>
+		<h3 style="text-align: center; width: 100%;" id="results_text">Results for search...</h3>
 
-		<select name="" id="">
+		<!-- <select name="" id="">
 			<option value="">Sort by: Popularity</option>
 			<option value="">Sort by: Newest Arrivals</option>
-		</select>
+		</select> -->
 	  </div>
 
       <div class="featured_products">
 
       </div>
 
-      <p class="page_numbering_section">Viewing page 3 of 7</p>
+      <!-- <p class="page_numbering_section">Viewing page 3 of 7</p>
 
       <div class="navigation_container" style="justify-content: center;">
         <div class="pagination_container">
@@ -918,7 +904,7 @@
           <div class="active_page">3</div>
           <div><i class="fa-solid fa-chevron-right"></i></div>
         </div>
-      </div>
+      </div> -->
     </div>
   </main>
 
@@ -1040,6 +1026,5 @@
 	<!-- page specific js below -->
 	<script src="./js/searchpage_toggleOptions.js"></script>
 	<script src="./js/searchpage_item_display.js"></script>
-	<script src="./js/search_filters.js"></script>
 </body>
 </html>

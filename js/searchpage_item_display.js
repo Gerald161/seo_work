@@ -92,3 +92,69 @@ allImages.forEach((image, index)=>{
         </div>
     `
 });
+
+// actual backend stuff below
+
+async function updateProducts(){
+    const params = new URLSearchParams(window.location.search);
+
+    var slug = params.get("q");
+
+    if(slug) {
+        slug = slug.replace(/\s+/g, "-");
+    }
+
+    var req = await fetch(`http://127.0.0.1:8000/products/search/${slug}`)
+
+    if(req.ok){
+        featured_products.innerHTML = ``;
+
+        var res = await req.json()
+
+        var all_products = res.all_products
+
+        if(all_products.length == 0){
+            var results_text = document.querySelector("#results_text");
+
+            const formattedSlug = slug.replace(/-/g, " ");
+
+            results_text.innerHTML = `No search results for ${formattedSlug}`
+        }else{
+            all_products.forEach((product, index)=>{
+                featured_products.innerHTML += `
+                <div class="product">
+                    <a href="product.html?slug=${product.slug}" class="image_container">
+                        <img src="http://127.0.0.1:8000/${product.image}" loading="lazy" alt="">
+                        ${index % 2 == 0 && `<div class="badge">25% off</div>`}
+                    </a>
+
+                    <div class="product_desc">
+                        <h3>${product.name}</h3>
+
+                        <div class="product_rating">
+                            <div class="product_stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <span class="rating_text">${product.ratings} ${product.reviews} reviews</span>
+                        </div>
+
+                        <div class="discount_section">
+                            <div class="price_and_discount">
+                                <p>£${product.price}</p>
+                                <span class="discount_price">${index % 2 == 0 ? "£" + (parseInt(product.price) + 20) : ""}</span>
+                            </div>
+                            ${index % 2 == 0 ? `<span class="discount">25% OFF</span>` : ""}
+                        </div>
+                    </div>
+                </div>
+                `
+            });
+        }
+    }
+}
+
+updateProducts()
