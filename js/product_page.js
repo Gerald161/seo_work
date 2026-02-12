@@ -6,8 +6,6 @@ var prev = document.querySelector('.prev');
 
 var slider = document.querySelector('.all_images');
 
-var additional_images = document.querySelectorAll(".additional_image");
-
 var selected_index = 0;
 
 var max_index = 0;
@@ -79,6 +77,8 @@ async function getProductDetails(){
                         `
                     }
                 })
+
+                var additional_images = document.querySelectorAll(".additional_image");
 
                 additional_images.forEach((additional_image, index)=>{
                     additional_image.addEventListener("click", (e)=>{
