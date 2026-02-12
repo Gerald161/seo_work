@@ -53,12 +53,12 @@ var allImages = [
 
 const featured_products = document.querySelector(".featured_products");
 
-allImages.forEach((image, index2)=>{
+allImages.forEach((image, index)=>{
     featured_products.innerHTML += `
     <div class="product">
         <a href="product.html" class="image_container">
             <img src="${image.image}" loading="lazy" alt="">
-            ${index2 % 2 == 0 && `<div class="badge">25% off</div>`}
+            ${index % 2 == 0 && `<div class="badge">25% off</div>`}
         </a>
 
         <div class="product_desc">
@@ -78,9 +78,9 @@ allImages.forEach((image, index2)=>{
             <div class="discount_section">
                 <div class="price_and_discount">
                     <p>£${image.price}</p>
-                    <span class="discount_price">${index2 % 2 == 0 ? "£"+parseInt(image.price) + 20 : ""}</span>
+                    <span class="discount_price">${index % 2 == 0 ? "£"+parseInt(image.price) + 20 : ""}</span>
                 </div>
-                ${index2 % 2 == 0 ? `<span class="discount">25% OFF</span>` : ""}
+                ${index % 2 == 0 ? `<span class="discount">25% OFF</span>` : ""}
             </div>
         </div>
     </div>
@@ -98,12 +98,12 @@ async function updateProducts(){
 
         var all_products = res.all_products
 
-        all_products.forEach((product, index2)=>{
+        all_products.forEach((product, index)=>{
             featured_products.innerHTML += `
             <div class="product">
                 <a href="product.html?slug=${product.slug}" class="image_container">
                     <img src="http://127.0.0.1:8000/${product.image}" loading="lazy" alt="">
-                    ${index2 % 2 == 0 && `<div class="badge">25% off</div>`}
+                    ${index % 2 == 0 && `<div class="badge">25% off</div>`}
                 </a>
 
                 <div class="product_desc">
@@ -123,9 +123,9 @@ async function updateProducts(){
                     <div class="discount_section">
                         <div class="price_and_discount">
                             <p>£${product.price}</p>
-                            <span class="discount_price">${index2 % 2 == 0 ? "£"+parseInt(product.price) + 20 : ""}</span>
+                            <span class="discount_price">${index % 2 == 0 ? "£" + (parseInt(product.price) + 20) : ""}</span>
                         </div>
-                        ${index2 % 2 == 0 ? `<span class="discount">25% OFF</span>` : ""}
+                        ${index % 2 == 0 ? `<span class="discount">25% OFF</span>` : ""}
                     </div>
                 </div>
             </div>

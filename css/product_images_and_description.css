@@ -78,6 +78,10 @@ main .additional_images{
   gap: 10px;
 }
 
+main .additional_images:empty{
+  width: 0;
+}
+
 main .additional_images .additional_image{
   position: relative;
   transition: all 0.8s;

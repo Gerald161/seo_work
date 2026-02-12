@@ -409,26 +409,13 @@
 
   <main style="border: none;">
     <div class="product_preview_plus_extra_images">
-      <div class="additional_images">
-        <div class="additional_image active">
-          <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" alt="Image">
-        </div>
-        <div class="additional_image">
-          <img src="https://images.pexels.com/photos/18186106/pexels-photo-18186106.jpeg" alt="Image">
-        </div>
-        <div class="additional_image">
-          <img src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg" alt="Image">
-        </div>
-        <div class="additional_image">
-          <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg" alt="Image">
-        </div>
-      </div>
+      <div class="additional_images" id="additional_images_container"></div>
       <div class="images_container">
         <div class="all_images">
-          <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" data-left="" alt="image">
-          <img src="https://images.pexels.com/photos/18186106/pexels-photo-18186106.jpeg" data-left="" alt="image">
+          <!-- <img src="https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg" data-left="" alt="image"> -->
+          <!-- <img src="https://images.pexels.com/photos/18186106/pexels-photo-18186106.jpeg" data-left="" alt="image">
           <img src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg" data-left="" alt="image">
-          <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg" data-left="" alt="image">
+          <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg" data-left="" alt="image"> -->
         </div>
 
         <a class="prev">&#10094;</a>
@@ -437,14 +424,14 @@
     </div>
 
     <div class="product_description">
-      <h2>Boa Fleece Jacket</h2>
+      <h2 id="name">Boa Fleece Jacket</h2>
 
-      <p style="color: #666">Jolt/Jackets</p>
+      <p style="color: #666" id="category">Jolt/Jackets</p>
 
       <div class="prices_and_discount">
-        <p class="old_price">£129.00</p>
-        <h2>£122.00</h2>
-        <p class="discount">5% Disc</p>
+        <p class="old_price" id="old_price">£129.00</p>
+        <h2 id="new_price">£122.00</h2>
+        <p class="discount" id="discount">5% Disc</p>
       </div>
       
       <div class="star_container">
@@ -455,12 +442,12 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star" style="color: grey"></i>
         </div>
-        <p>(4.6) | 200 ratings</p>
+        <p id="ratings">(4.6) | 200 ratings</p>
       </div>
 
-      <p style="font-weight: bold;">Descriptions</p>
+      <p style="font-weight: bold;">Description</p>
 
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      <p id="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Non, soluta voluptatem modi doloremque ipsam excepturi recusandae, ad 
           consectetur alias distinctio suscipit repellendus explicabo, dignissimos saepe nemo cum! 
           Natus, illo commodi.
